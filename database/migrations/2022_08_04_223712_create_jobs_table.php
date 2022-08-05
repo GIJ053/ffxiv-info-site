@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('abbreviation');
             $table->integer('job_index');
-            $table->integer('role');
+            $table->foreignId('role_id');
             $table->boolean('is_disciple_of_war');
             $table->timestamps();
         });

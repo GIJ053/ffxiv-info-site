@@ -1,18 +1,47 @@
 <template>
-    <div class="card lg:card-side lg:w-11/12 bg-base-100 shadow-xl" :class="job.color">
-        <figure><img src="/images/bg.jpg" class="w-full h-60 lg:w-96 lg:h-96 " alt="Album"></figure>
-        <div class="card-body">
-            <h2 class="card-title">{{ job.name }}</h2>
-            <p>Click the button to listen on Spotiwhy app.</p>
-            <div class="card-actions justify-end">
-                <button class="btn btn-secondary">Listen</button>
-            </div>
+    <div id=jobCard class="w-full h-full flex">
+        <div class="flex-1 bg-slate-700 rounded-l-lg flex flex-col items-center justify-around">
+            <p class="text-white
+                text-2xs
+                md:text-xl
+                lg:text-2xl"
+            >
+                {{ job.name }}
+            </p>
+
+            <img :src="'https://xivapi.com/cj/1/' + slug + '.png'"
+                class="h-16 w-16
+                    md:h-24 md:w-24
+                    lg:h-32 lg:w-32"
+            />
+        </div>
+
+        <div class="flex-1 btn-group btn-group-vertical">
+            <button class="btn btn-xs flex-1 rounded-l-none rounded-r-lg
+                md:btn-sm
+                lg:btn-lg"
+            >
+                Skills
+            </button>
+
+            <button class="btn btn-xs flex-1 rounded-l-none rounded-r-lg
+                md:mtn-sm
+                lg:btn-lg"
+            >
+                Traits
+            </button>
         </div>
     </div>
 </template>
 
 <script setup>
-    defineProps({
-        job: Object,
-    })
+
+let props = defineProps({
+    job: Object,
+    slug: String,
+});
+
+
+
 </script>
+

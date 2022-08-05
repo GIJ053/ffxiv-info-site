@@ -18,4 +18,9 @@ class Job extends Model
     {
         return $this->belongsTo(ParentClass::class);
     }
+
+    public function Role()
+    {
+        return $this->belongsTo(Role::class);
+    }
 }
