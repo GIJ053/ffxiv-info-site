@@ -1,4 +1,4 @@
-<template>
+<template #[contantSlot]>
     <Head>
         <title>FFXIV Job Site</title>
 
@@ -9,7 +9,10 @@
         >
     </Head>
 
-    <Nav />
+    <Nav>
+        <slot />
+    </Nav>
+
 </template>
 
 <script setup>
