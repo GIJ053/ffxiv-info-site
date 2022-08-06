@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Job;
 use App\Models\Role;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
@@ -22,9 +23,14 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/users', function () {
-    return Inertia::render('Users');
+Route::get('/jobs/{job:slug}/actions', function (Job $job) {
+    return Inertia::render('Actions', [
+        'job' => $job,
+        'actions' => $job->Actions()->orderBy('level', 'asc')->get(),
+    ]);
 });
+
+
 
 Route::get('/settings', function () {
     return Inertia::render('Settings');
