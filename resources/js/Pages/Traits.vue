@@ -4,9 +4,8 @@
             <!-- head -->
             <thead>
                 <tr>
-                    <th class="lg:w-2/12">Action</th>
+                    <th class="lg:w-2/12">Trait</th>
                     <th class="lg:w-3/5">Description</th>
-                    <th class="text-center">Cooldown</th>
                 </tr>
             </thead>
             <tbody>
@@ -16,21 +15,19 @@
                         <div class="flex items-center space-x-3">
                             <div class="avatar">
                                 <div class="mask mask-squircle w-12 h-12">
-                                    <img :src="'https://xivapi.com' + action.hd_icon_url"
-                                        alt="Avatar Tailwind CSS Component" />
+                                    <!-- <img :src="" -->
+                                        <!-- alt="Avatar Tailwind CSS Component" /> -->
                                 </div>
                             </div>
                             <div>
-                                <div class="font-bold">{{ action.name }}</div>
-                                <div class="text-sm opacity-50">Learned at level {{ action.level }}</div>
+                                <div class="font-bold">{{ }}</div>
+                                <div class="text-sm opacity-50">Learned at level {{  }}</div>
                             </div>
                         </div>
                     </td>
 
-                    <td v-html="action.description" class="whitespace-normal">
+                    <td v-html="traitInfo.description" class="whitespace-normal">
                     </td>
-
-                    <td class="text-center">{{ action.cooldown }} seconds</td>
                 </tr>
             </tbody>
         </table>
@@ -39,15 +36,11 @@
 </template>
 
 <script setup>
+
 defineProps({
     job: Object,
-    actions: Array,
+    id: Number,
 })
 
 </script>
 
-<style>
-.span {
-    color: darkorange;
-}
-</style>

@@ -13,18 +13,22 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                wacky: ['Wacky'],
             },
         },
     },
 
     plugins: [
-        require('@tailwindcss/forms'),
+        require('@tailwindcss/forms')({
+            strategy: 'class',
+        }),
         require("daisyui"),
     ],
 
     daisyui: {
         themes: [
-            "corporate"
+            "garden", "luxury"
         ],
+        darkTheme: "luxury",
     },
 };

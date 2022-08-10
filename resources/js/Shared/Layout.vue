@@ -1,4 +1,4 @@
-<template #[contantSlot]>
+<template>
     <Head>
         <title>FFXIV Job Site</title>
 

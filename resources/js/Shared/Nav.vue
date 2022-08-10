@@ -23,9 +23,24 @@
                 </div>
 
                 <div class="flex-1 px-2 mx-2">FFXIV Site</div>
+                <img src="/images/light-mode-icon.svg"
+                    class="h-8 self-center"
+                    :class="checked ? 'invert' : 'invert-0'"
+                    />
+                    <input type="checkbox"
+                        class="toggle toggle-lg self-center"
+                        data-toggle-theme="garden,luxury"
+                        data-act-class="ACTIVECLASS"
+                        v-model="checked"
+                    />
+                    <img src="/images/dark-mode-icon.svg"
+                        class="h-8 self-center"
+                        :class="checked ? 'invert' : 'invert-0'"
+                    />
 
                 <!-- DESKTOP MENU -->
                 <div class="flex-none hidden lg:block">
+
                     <ul class="menu menu-horizontal">
                         <NavLink href="/" :active="$page.component === 'Home'" >Home</NavLink>
                         <NavLink href="/settings" :active="$page.component === 'Settings'" >Settings</NavLink>
@@ -50,4 +65,16 @@
 
 <script setup>
     import NavLink from './NavLink.vue';
+    import { themeChange } from 'theme-change';
+    import { ref, onMounted } from 'vue';
+
+
+
+    onMounted(() => {
+        themeChange(false);
+    })
+
+    let checked = ref(localStorage.getItem('theme') == 'luxury');
+
+
 </script>

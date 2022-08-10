@@ -30,7 +30,12 @@ Route::get('/jobs/{job:slug}/actions', function (Job $job) {
     ]);
 });
 
-
+Route::get('/jobs/{job:slug}/traits', function (Job $job) {
+    return Inertia::render('Traits', [
+        'job' => $job,
+        'id' => $job->id,
+    ]);
+});
 
 Route::get('/settings', function () {
     return Inertia::render('Settings');

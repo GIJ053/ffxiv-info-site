@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "wacky";
+    src: url("/public/OstrichSans-Heavy.otf");
+    src: url("/public/PhospheneFont-Regular.ttf");
+    src: url("/public/Betatron-Regular.otf");
+    src: url("/public/victors.otf");
+}
