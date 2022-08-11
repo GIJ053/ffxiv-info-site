@@ -9,7 +9,7 @@
                     <th class="text-center">Cooldown</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody >
                 <!-- row 1 -->
                 <tr v-for="action in actions">
                     <td class="whitespace-normal">
@@ -27,10 +27,10 @@
                         </div>
                     </td>
 
-                    <td v-html="action.description" class="whitespace-normal">
+                    <td v-html="action.description" class="whitespace-normal" id="actionDescription">
                     </td>
 
-                    <td class="text-center">{{ action.cooldown }} seconds</td>
+                    <td class="text-center">{{ action.cooldown + " seconds" }} </td>
                 </tr>
             </tbody>
         </table>
@@ -44,10 +44,27 @@ defineProps({
     actions: Array,
 })
 
+const success = 'hsl(var(--su))';
+const info = 'hsl(var(--in))';
+const warning = 'hsl(var(--wa))';
+
 </script>
 
 <style>
-.span {
-    color: darkorange;
+#actionDescription > span[style*="color:#ffff66"] {
+    color: v-bind('success') !important;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#actionDescription > span[style*="color:#00cc22"] {
+    color: v-bind('info') !important;
+    font-weight: bold;
+}
+
+#actionDescription > span[style*="#ff7b1a"] {
+    color: v-bind('warning') !important;
+    font-weight: bold;
+    font-style: italic;
 }
 </style>

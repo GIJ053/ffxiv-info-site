@@ -14,6 +14,11 @@ class Job extends Model
         return $this->hasMany(Action::class);
     }
 
+    public function Passives()
+    {
+        return $this->hasMany(Passive::class);
+    }
+
     public function ParentClass()
     {
         return $this->belongsTo(ParentClass::class);

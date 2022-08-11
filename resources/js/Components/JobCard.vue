@@ -1,7 +1,7 @@
 <template>
     <div id=jobCard class="w-full h-full flex">
         <div class="flex-1 rounded-l-lg flex flex-col items-center justify-around py-4" :class="color[2]">
-            <p class="text-white text-center
+            <p class="text-center
                 text-[8px]
                 sm:text-xs
                 md:text-lg

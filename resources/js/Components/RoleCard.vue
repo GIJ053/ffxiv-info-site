@@ -14,7 +14,7 @@
             />
         </div>
 
-        <div class="card-body text-white">
+        <div class="card-body">
             <h2 class="card-title">{{ role.name }}</h2>
 
             <p>Hello</p>
@@ -28,17 +28,10 @@
 
 <script setup>
 import JobCard from './JobCard.vue';
-import { ref } from 'vue';
 
     defineProps({
         role: Object,
     });
-
-    let roleCard = ref(null);
-
-    defineExpose({
-        roleCard
-    })
 
     function findColor(id) {
         let color = [];
