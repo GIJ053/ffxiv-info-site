@@ -17,7 +17,9 @@
         <div class="card-body h-3/5 md:h-2/3 lg:h-full lg:w-1/5 bg-">
             <h2 class="card-title">{{ role.name }}</h2>
 
-            <p class ="text-sm md:text-base">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque autem aut ratione iste. Est placeat, nemo veniam assumenda consequatur cum porro. Consequuntur consequatur impedit odio!</p>
+            <p class ="text-sm md:text-base">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Cumque autem aut ratione iste. Est placeat, nemo veniam assumenda consequatur cum porro. Consequuntur consequatur impedit odio!
+            </p>
 
             <div class="card-actions justify-end">
                 <button class="btn border-0 btn-sm md:btn-md" :class="findColor(role.id)[2] + ' ' + findColor(role.id)[3]">More Info</button>

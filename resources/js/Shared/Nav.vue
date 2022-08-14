@@ -80,10 +80,15 @@
 
     function checkDarkMode() {
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            localStorage.setItem('theme', "luxury");
+            localStorage.setItem('theme', 'luxury');
             return true;
+        } else {
+            if (!localStorage.getItem('theme')) {
+                document.documentElement.setAttribute('data-theme', 'garden');
+                localStorage.setItem('theme', 'garden');
+            }
+            return localStorage.getItem('theme') === 'luxury';
         }
-        else return localStorage.getItem('theme') === "luxury";
     }
 
     onMounted(() => {
