@@ -16,6 +16,9 @@ use Illuminate\Foundation\Application;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware('auth')->group(function () {
+
+});
 
 Route::get('/', function () {
     return Inertia::render('Home', [
@@ -41,8 +44,6 @@ Route::get('/settings', function () {
     return Inertia::render('Settings');
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
 
 require __DIR__.'/auth.php';

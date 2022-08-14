@@ -1,15 +1,15 @@
 <template>
-    <div class="w-full overflow-x-clip text-2xs lg:text-xl">
+    <div class="w-full overflow-x-clip text-xl lg:text-2xl">
         <table class="table w-full">
             <!-- head -->
             <thead>
                 <tr>
-                    <th class="lg:w-2/12">Action</th>
-                    <th class="lg:w-3/5">Description</th>
-                    <th class="text-center">Cooldown</th>
+                    <th class="lg:w-2/12 text-xl">Action</th>
+                    <th class="lg:w-3/5 text-xl">Description</th>
+                    <th class="text-center text-xl">Cooldown</th>
                 </tr>
             </thead>
-            <tbody >
+            <tbody>
                 <!-- row 1 -->
                 <tr v-for="action in actions">
                     <td class="whitespace-normal">

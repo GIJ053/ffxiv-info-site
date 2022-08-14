@@ -3,9 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "wacky";
-    src: url("/public/OstrichSans-Heavy.otf");
+    font-family: "SummerPixel";
+    src: url("/public/SummerPixel22Regular-jE0W7.ttf");
+}
+
+@font-face {
+    font-family: "Ostrich";
     src: url("/public/PhospheneFont-Regular.ttf");
     src: url("/public/Betatron-Regular.otf");
     src: url("/public/victors.otf");
+    src: url("/public/OstrichSans-Heavy.otf");
 }

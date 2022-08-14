@@ -13,7 +13,8 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
-                wacky: ['Wacky'],
+                summerpixel: ['SummerPixel'],
+                ostrich: ['Ostrich'],
             },
         },
     },

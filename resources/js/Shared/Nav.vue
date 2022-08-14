@@ -1,6 +1,6 @@
 <template>
-    <div class="drawer bg-base-200">
-        <input type="checkbox" id="site-drawer" class="drawer-toggle"/>
+    <div class="drawer bg-base-200 font-ostrich">
+        <input type="checkbox" id="site-drawer" class="drawer-toggle" v-model="toggle"/>
         <div class="drawer-content flex flex-col">
             <!-- Navbar -->
             <nav class="w-full navbar bg-base-300">
@@ -22,7 +22,7 @@
                     </label>
                 </div>
 
-                <div class="flex-1 px-2 mx-2">FFXIV Site</div>
+                <div class="flex-1 px-2 mx-2 text-4xl">FFXIV Site</div>
                 <img src="/images/light-mode-icon.svg"
                     class="h-8 self-center"
                     :class="checked ? 'invert' : 'invert-0'"
@@ -56,8 +56,15 @@
         <div class="drawer-side">
             <label for="site-drawer" class="drawer-overlay"></label>
             <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 space-y-4">
-                <NavLink href="/" :active="$page.component === 'Home'">Home</NavLink>
-                <NavLink href="/settings" :active="$page.component === 'Settings'" >Settings</NavLink>
+                <button class="btn btn-error mb-6"
+                @click="toggle = false"
+                >
+                    CLOSE
+                </button>
+
+                <NavLink href="/" :active="$page.component === 'Home'" @click="toggle = false">Home</NavLink>
+
+                <NavLink href="/settings" :active="$page.component === 'Settings'" @click="toggle = false">Settings</NavLink>
             </ul>
         </div>
     </div>
@@ -68,13 +75,10 @@
     import { themeChange } from 'theme-change';
     import { ref, onMounted } from 'vue';
 
-
+    let checked = ref(localStorage.getItem('theme') == 'luxury');
+    let toggle = ref(false);
 
     onMounted(() => {
         themeChange(false);
     })
-
-    let checked = ref(localStorage.getItem('theme') == 'luxury');
-
-
 </script>

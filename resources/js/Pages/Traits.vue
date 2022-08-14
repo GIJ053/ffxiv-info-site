@@ -1,11 +1,11 @@
 <template>
-    <div class="w-full overflow-x-clip text-2xs lg:text-xl">
+    <div class="w-full overflow-x-clip text-xl lg:text-2xl">
         <table class="table w-full">
             <!-- head -->
             <thead>
                 <tr>
-                    <th class="lg:w-2/12">Trait</th>
-                    <th class="lg:w-3/5">Description</th>
+                    <th class="lg:w-2/12 text-xl">Trait</th>
+                    <th class="lg:w-3/5 text-xl">Description</th>
                 </tr>
             </thead>
             <tbody>

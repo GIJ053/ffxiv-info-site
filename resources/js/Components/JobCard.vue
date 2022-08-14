@@ -2,10 +2,9 @@
     <div id=jobCard class="w-full h-full flex">
         <div class="flex-1 rounded-l-lg flex flex-col items-center justify-around py-4" :class="color[2]">
             <p class="text-center
-                text-[8px]
-                sm:text-xs
-                md:text-lg
-                lg:text-2xl"
+                text-xs
+                sm:text-lg
+                md:text-3xl"
             >
                 {{ job.name }}
             </p>
@@ -18,9 +17,9 @@
 
         <div class="flex-1 btn-group btn-group-vertical">
             <Link class="btn btn-xs flex-1 rounded-l-none rounded-r-lg border-0
-                md:btn-sm
-                lg:btn-md
-                xl:btn-lg"
+                sm:btn-xs
+                lg:btn-lg
+                xl:btn-xl"
                 :href="'/jobs/' + job.slug + '/actions'"
                 :class="color[2] + ' ' + color[3]"
             >
@@ -28,9 +27,9 @@
             </Link>
 
             <Link class="btn btn-xs flex-1 rounded-l-none rounded-r-lg border-0
-                md:btn-sm
-                lg:btn-md
-                xl:btn-lg"
+                sm:btn-md
+                lg:btn-lg
+                xl:btn-xl"
                 :href="'/jobs/' + job.slug + '/traits'"
                 :class="color[2] + ' ' + color[3]"
             >
@@ -48,4 +47,8 @@ let props = defineProps({
     color: Array,
 });
 </script>
+
+<style>
+
+</style>
 
