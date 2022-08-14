@@ -25,7 +25,7 @@
                 <div class="flex-1 px-2 mx-2 text-4xl">FFXIV Site</div>
                 <img src="/images/light-mode-icon.svg"
                     class="h-8 self-center"
-                    :class="checked ? 'invert-0' : 'invert'"
+                    :class="checked ? 'invert' : 'invert-0'"
                     />
                     <input type="checkbox"
                         class="toggle toggle-lg self-center"
@@ -35,7 +35,7 @@
                     />
                     <img src="/images/dark-mode-icon.svg"
                         class="h-8 self-center"
-                        :class="checked ? 'invert-0' : 'invert'"
+                        :class="checked ? 'invert' : 'invert-0'"
                     />
 
                 <!-- DESKTOP MENU -->
