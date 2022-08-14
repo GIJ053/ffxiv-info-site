@@ -10,7 +10,8 @@
             </p>
 
             <img :src="'https://xivapi.com/cj/1/' + job.slug + '.png'"
-                class="h-14 w-14
+                class="h-10 w-10
+                    sm:h-14 sm:w-14
                     lg:h-28 lg:w-28"
             />
         </div>

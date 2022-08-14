@@ -25,7 +25,7 @@
                 <div class="flex-1 px-2 mx-2 text-4xl">FFXIV Site</div>
                 <img src="/images/light-mode-icon.svg"
                     class="h-8 self-center"
-                    :class="checked ? 'invert' : 'invert-0'"
+                    :class="checked ? 'invert-0' : 'invert'"
                     />
                     <input type="checkbox"
                         class="toggle toggle-lg self-center"
@@ -35,7 +35,7 @@
                     />
                     <img src="/images/dark-mode-icon.svg"
                         class="h-8 self-center"
-                        :class="checked ? 'invert' : 'invert-0'"
+                        :class="checked ? 'invert-0' : 'invert'"
                     />
 
                 <!-- DESKTOP MENU -->
@@ -75,8 +75,16 @@
     import { themeChange } from 'theme-change';
     import { ref, onMounted } from 'vue';
 
-    let checked = ref(localStorage.getItem('theme') == 'luxury');
+    let checked = ref(checkDarkMode());
     let toggle = ref(false);
+
+    function checkDarkMode() {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            localStorage.setItem('theme', "luxury");
+            return true;
+        }
+        else return localStorage.getItem('theme') === "luxury";
+    }
 
     onMounted(() => {
         themeChange(false);
