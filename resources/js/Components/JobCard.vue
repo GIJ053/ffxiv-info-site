@@ -4,7 +4,7 @@
             <p class="text-center
                 text-xs
                 sm:text-lg
-                md:text-3xl"
+                lg:text-2xl"
             >
                 {{ job.name }}
             </p>
@@ -19,8 +19,7 @@
         <div class="flex-1 btn-group btn-group-vertical">
             <Link class="btn btn-xs flex-1 rounded-l-none rounded-r-lg border-0
                 sm:btn-xs
-                lg:btn-lg
-                xl:btn-xl"
+                lg:btn-lg"
                 :href="'/jobs/' + job.slug + '/actions'"
                 :class="color[2] + ' ' + color[3]"
             >
@@ -28,9 +27,8 @@
             </Link>
 
             <Link class="btn btn-xs flex-1 rounded-l-none rounded-r-lg border-0
-                sm:btn-md
-                lg:btn-lg
-                xl:btn-xl"
+                sm:btn-xs
+                lg:btn-lg"
                 :href="'/jobs/' + job.slug + '/traits'"
                 :class="color[2] + ' ' + color[3]"
             >

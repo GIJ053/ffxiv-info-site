@@ -1,6 +1,6 @@
 <template>
     <Link
-        class="btn btn-primary"
+        class="btn btn-primary self-center"
         :class="{'btn-disabled': active}"
     >
         <slot />

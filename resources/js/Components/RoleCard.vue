@@ -4,8 +4,8 @@
         ref="roleCard"
     >
         <div class="grid items-center gap-y-1 gap-x-1 p-1
-            h-2/5 md:h-2/3 grid-flow-row grid-cols-2 auto-rows-fr
-            lg:h-full lg:w-4/5 lg:grid-rows-2 lg:grid-flow-col lg:auto-cols-fr"
+            h-2/5 sm:h-3/5 grid-flow-row grid-cols-2 auto-rows-fr
+            lg:h-full lg:w-3/4 lg:grid-rows-2 lg:grid-flow-col lg:auto-cols-fr"
         >
             <JobCard v-for="job in role.jobs"
                 :job="job"
@@ -14,7 +14,7 @@
             />
         </div>
 
-        <div class="card-body h-3/5 md:h-2/3 lg:h-full lg:w-1/5 bg-">
+        <div class="card-body h-3/5 sm:h-2/5 lg:h-full lg:w-1/5">
             <h2 class="card-title">{{ role.name }}</h2>
 
             <p class ="text-sm md:text-base">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -22,7 +22,7 @@
             </p>
 
             <div class="card-actions justify-end">
-                <button class="btn border-0 btn-sm md:btn-md" :class="findColor(role.id)[2] + ' ' + findColor(role.id)[3]">More Info</button>
+                <button class="btn border-0 btn-sm lg:btn-lg" :class="findColor(role.id)[2] + ' ' + findColor(role.id)[3]">More Info</button>
             </div>
         </div>
     </div>

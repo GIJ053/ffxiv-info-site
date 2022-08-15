@@ -1,27 +1,28 @@
 <template>
-    <div class="w-full overflow-x-clip text-xl lg:text-2xl">
+    <div class="w-full overflow-x-clip text-sm lg:text-2xl">
         <table class="table w-full">
             <!-- head -->
             <thead>
                 <tr>
-                    <th class="lg:w-2/12 text-xl">Action</th>
-                    <th class="lg:w-3/5 text-xl">Description</th>
+                    <th class="text-xl">Action</th>
+                    <th class="text-xl">Description</th>
                     <th class="text-center text-xl">Cooldown</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- row 1 -->
                 <tr v-for="action in actions">
-                    <td class="whitespace-normal">
-                        <div class="flex items-center space-x-3">
+                    <td class="whitespace-normal px-2 py-6">
+                        <div class="flex items-center space-x-3 p-x-8">
                             <div class="avatar">
-                                <div class="mask mask-squircle w-12 h-12">
+                                <div class="rounded-xl w-10 h-10 lg:w-16 lg:h-16">
                                     <img :src="'https://xivapi.com' + action.hd_icon_url"
                                         alt="Avatar Tailwind CSS Component" />
                                 </div>
                             </div>
+
                             <div>
                                 <div class="font-bold">{{ action.name }}</div>
+
                                 <div class="text-sm opacity-50">Learned at level {{ action.level }}</div>
                             </div>
                         </div>

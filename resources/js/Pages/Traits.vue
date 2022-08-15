@@ -1,20 +1,20 @@
 <template>
-    <div class="w-full overflow-x-clip text-xl lg:text-2xl">
+    <div class="w-full overflow-x-clip text-sm lg:text-2xl">
         <table class="table w-full">
             <!-- head -->
             <thead>
                 <tr>
-                    <th class="lg:w-2/12 text-xl">Trait</th>
-                    <th class="lg:w-3/5 text-xl">Description</th>
+                    <th class="text-xl">Trait</th>
+                    <th class="text-xl">Description</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- row 1 -->
                 <tr v-for="trait in traits">
                     <td class="whitespace-normal">
-                        <div class="flex items-center space-x-3">
+                        <div class="flex items-center space-x-3 p-x-8">
                             <div class="avatar">
-                                <div class="mask mask-squircle w-12 h-12">
+                                <div class="rounded-xl w-10 h-10 lg:w-16 lg:h-16">
                                     <img :src="'https://xivapi.com' + trait.hd_icon_url"
                                         alt="Avatar Tailwind CSS Component" />
                                 </div>
